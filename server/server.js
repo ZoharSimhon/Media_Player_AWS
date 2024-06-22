@@ -5,13 +5,6 @@ const app = express();
 const port = 3000;
 const cors = require('cors');
 
-
-// AWS.config.update({
-//   accessKeyId: 'YOUR_ACCESS_KEY_ID',
-//   secretAccessKey: 'YOUR_SECRET_ACCESS_KEY',
-//   region: 'YOUR_REGION'
-// });
-
 const s3 = new AWS.S3();
 const bucketName = 'zohar-assignment1-videos';
 

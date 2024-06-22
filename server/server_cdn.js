@@ -8,13 +8,6 @@ const fs = require('fs');
 const app = express();
 const port = 3000;
 
-// AWS SDK configuration (commented out as AWS credentials are typically managed through environment variables or IAM roles)
-// AWS.config.update({
-//   accessKeyId: 'YOUR_ACCESS_KEY_ID',
-//   secretAccessKey: 'YOUR_SECRET_ACCESS_KEY',
-//   region: 'YOUR_REGION'
-// });
-
 // CloudFront key pair ID and private key for signing URLs
 const cloudFrontKeyPairId = 'K2517LF4H1QMNE';
 const privateKey = fs.readFileSync('./key.pem', 'utf-8');
@@ -23,7 +16,6 @@ const privateKey = fs.readFileSync('./key.pem', 'utf-8');
 const s3 = new AWS.S3();
 const bucketName = 'zohar-assignment1-videos'; // S3 bucket name
 const cloudFrontUrl = 'https://d2x7fviad3egxx.cloudfront.net'; // CloudFront distribution URL
-// const dateLessThan = '2024-12-12';
 
 
 // Enable CORS for all routes
