@@ -1,8 +1,12 @@
 {
   "dependencies": {
     "aws-sdk": "^2.1643.0",
+    "axios": "^1.7.2",
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "http-server": "^14.1.1"
+  },
+  "scripts": {
+    "test": "node loadTest.js"
   }
 }
